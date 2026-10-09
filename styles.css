@@ -1,0 +1,381 @@
+/* Basic reset and text */
+* {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, p, figure, blockquote {
+  margin: 0;
+}
+
+body {
+  background: #12110f;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color-scheme: dark;
+}
+
+h1, h2, h3, h4 {
+  font-size: 32px;
+  font-weight: normal;
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+
+a, button, input, select, textarea {
+  color: white;
+  font: inherit;
+}
+
+em, i, cite {
+  font-style: normal;
+}
+
+p + p, figcaption, .image-note, .image-credit, .reflection-result {
+  margin-top: 16px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Page layout */
+.page-width {
+  width: 90%;
+  max-width: 1120px;
+  margin: auto;
+}
+
+.intro, .site-footer {
+  padding: 32px 0;
+}
+
+.intro-copy, .section-lead {
+  max-width: 760px;
+}
+
+.section {
+  margin-top: 48px;
+}
+
+.section-heading, .section-lead {
+  margin-bottom: 24px;
+}
+
+.instrument-feature, .setup-steps, .video-row, .sound-layout,
+.song-player, .quiz-layout, .reflection-layout {
+  display: flex;
+  gap: 32px;
+}
+
+.instrument-feature > *, .setup-steps > *, .video-row > *, .sound-layout > *,
+.song-player > *, .quiz-layout > *, .reflection-layout > * {
+  flex: 1;
+  min-width: 0;
+}
+
+.instrument-feature, .video-row, .quiz-layout {
+  align-items: center;
+}
+
+.subheading, .video-row, .song-resources {
+  margin-top: 32px;
+}
+
+/* Instrument pictures */
+.sax-portrait img, .part-image, .quiz-image {
+  background: white;
+  padding: 16px;
+}
+
+.sax-portrait img, .part-image img, .quiz-image img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.sax-portrait img {
+  height: 490px;
+}
+
+figcaption {
+  text-align: center;
+}
+
+blockquote {
+  border-left: 2px solid #d6b56d;
+  padding-left: 20px;
+  margin: 24px 0;
+}
+
+cite {
+  display: block;
+}
+
+.parts-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px 0;
+}
+
+.part {
+  width: 48%;
+}
+
+.part-image img {
+  height: 190px;
+}
+
+.part h4 {
+  margin-top: 16px;
+}
+
+/* Assembly and videos */
+.setup-steps, .lesson-timestamps {
+  list-style: none;
+  padding: 0;
+}
+
+.setup-steps img, .mouth-figure img {
+  width: 100%;
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 16px;
+}
+
+.video-slot, .song-player {
+  background: #1b1915;
+  border: 1px solid #5a4b30;
+}
+
+.video-launch, .video-slot iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
+
+.video-launch {
+  background: transparent;
+  padding: 16px;
+}
+
+.video-launch span, .note-display span {
+  display: block;
+}
+
+.lesson-timestamps li, details {
+  padding: 12px 0;
+  border-bottom: 1px solid #5a4b30;
+}
+
+.lesson-timestamps span {
+  margin-right: 16px;
+}
+
+/* Song and fingering guide */
+.song-reading, .fingering-stage {
+  padding: 20px;
+}
+
+.player-top, .note-display, .player-controls, .melody-phrase {
+  display: flex;
+  gap: 16px;
+}
+
+.player-top {
+  justify-content: space-between;
+}
+
+.note-display, .melody, .player-controls {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.melody-note, .player-controls button {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+}
+
+.melody-note.current {
+  background: #514329;
+  outline: 1px solid #d6b56d;
+}
+
+.fingering-stage img {
+  height: 390px;
+  width: auto;
+  margin: auto;
+}
+
+summary {
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.fingering-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th, td {
+  border: 1px solid #5a4b30;
+  padding: 8px;
+  font-weight: normal;
+}
+
+.fingering-table img {
+  height: 170px;
+  width: auto;
+  margin: auto;
+}
+
+.sheet-music {
+  width: 100%;
+  max-width: 680px;
+  margin: auto;
+}
+
+/* Buttons and quiz */
+button {
+  cursor: pointer;
+}
+
+.button, .quiz-option {
+  background: #1b1915;
+  border: 1px solid #d6b56d;
+  padding: 12px 20px;
+}
+
+.button.gold, button:hover {
+  background: #514329;
+}
+
+button:disabled {
+  cursor: default;
+  border-style: dashed;
+}
+
+.quiz-image img {
+  height: 340px;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.quiz-option {
+  text-align: left;
+}
+
+.quiz-option.correct {
+  background: #514329;
+}
+
+.quiz-option.incorrect {
+  border-color: #d58c7a;
+}
+
+.quiz-feedback {
+  min-height: 60px;
+  margin: 16px 0;
+}
+
+/* Reflection form and footer */
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0 0 24px;
+}
+
+.field-label, .radio-choice {
+  display: block;
+  margin: 12px 0;
+}
+
+input[type=radio] {
+  accent-color: #d6b56d;
+}
+
+textarea, select {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 24px;
+  background: #1b1915;
+  border: 1px solid #5a4b30;
+}
+
+textarea {
+  resize: vertical;
+}
+
+textarea::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* Keyboard and screen-reader access */
+:focus-visible {
+  outline: 2px solid #d6b56d;
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  top: -80px;
+  left: 16px;
+  padding: 12px;
+  background: #514329;
+  z-index: 1;
+}
+
+.skip-link:focus {
+  top: 8px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Stack the sections on smaller screens */
+@media (max-width: 700px) {
+  .instrument-feature, .setup-steps, .video-row, .sound-layout,
+  .song-player, .quiz-layout, .reflection-layout {
+    flex-direction: column;
+  }
+
+  .instrument-feature > *, .video-row > *, .quiz-layout > *, .part {
+    width: 100%;
+  }
+
+  .sax-portrait img, .quiz-image img {
+    height: 320px;
+  }
+
+  .melody-phrase {
+    gap: 4px;
+  }
+}
